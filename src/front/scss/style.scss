@@ -1,0 +1,40 @@
+@import "../../modules/scss/reset.scss";
+
+html, body {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-webkit-user-drag: none;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Lato';
+	line-height: 1;
+	color: #333;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	z-index: 0;
+	-webkit-backface-visibility: hidden;
+	position: relative;
+
+}
+
+.flex {
+	display: flex;
+
+	&--row {
+		flex-flow: row;
+		justify-content: space-between;
+	}
+
+	&--column {
+		flex-flow: column;
+	}
+}
+
