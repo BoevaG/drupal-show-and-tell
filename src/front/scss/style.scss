@@ -1,4 +1,9 @@
 @import "../../modules/scss/reset.scss";
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+$baseColor: #084e71;
+$accentColor: #ea5eb7;
+
 
 html, body {
 	-ms-touch-action: manipulation;
@@ -12,9 +17,9 @@ html, body {
 
 body {
 	font-size: 16px;
-	font-family: 'Lato';
+	font-family: 'Raleway';
 	line-height: 1;
-	color: #333;
+	color: $baseColor;
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
@@ -22,6 +27,10 @@ body {
 	z-index: 0;
 	-webkit-backface-visibility: hidden;
 	position: relative;
+
+	@media screen and (max-width: 1060px) {
+		font-size: 90%;
+	}
 
 }
 
@@ -38,3 +47,103 @@ body {
 	}
 }
 
+.wrap {
+	position: relative;
+	width: 1060px;
+	height: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	box-shadow: 0px 0px 4px #cecece;
+	z-index: 10000;
+	
+	.wrap {
+		align-items: flex-end;
+		padding-bottom: 10px;
+	}
+
+	.logo {
+		font-size: 2.5em; /* 40/16 */
+		font-weight: 600;
+		color: $accentColor;
+	}
+
+	nav {
+		height: 40px;
+		line-height: 40px;
+
+		a {
+			height: 100%;
+			margin: 0 20px;
+			color: $baseColor;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			@media screen and(min-width: 1025px) {
+				&:hover {
+					color: $accentColor;
+				}
+			}
+		}
+	}
+}
+
+.layout {
+	position: relative;
+}
+
+#intro {
+	width: 100%;
+	height: 60vh;
+	background: url('../img/audience.jpg')no-repeat center top;
+	background-size: cover;
+	padding-top: 80px;
+
+	.info {
+		display: flex;
+		flex-basis: 40em;
+		align-items: center;
+
+
+		p {
+			font-style: italic;
+			text-align: justify;
+			font-size: 1em;
+			line-height: 1.25em; /* 20/16 */
+		}
+	} 
+
+	.contact-email {
+		text-align: center;
+		flex-basis: 20em;
+		justify-content: center;
+
+		span {
+			font-size: 30px;
+			line-height: 35px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: $accentColor;
+			font-weight: 600;
+		}
+	}
+}
+
+#videos {
+	.date {
+		color: $accentColor;
+	}
+}
