@@ -36,7 +36,6 @@ body {
 	@media screen and (max-width: 768px) {
 		font-size: 80%;
 	}
-
 }
 
 .flex {
@@ -256,6 +255,7 @@ header {
 		
 		figure {
 			max-height: 194px;
+
 			img {
 				width: 100%;
 			}
@@ -363,7 +363,7 @@ header {
 			max-width: 39em;
 			width: 100%;
 			margin: 0 auto;
-			padding: 0 20px;
+			padding: 0 1.25em; /* 20/16 */
 		}
 
 		.contact-email {
@@ -377,7 +377,6 @@ header {
 	@media screen and (max-height: 440px) {
 		height: 77vh;
 	}
-
 }
 
 #videos, #speakers {
